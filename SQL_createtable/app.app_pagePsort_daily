@@ -1,0 +1,7 @@
+create table app.app_page_sort_daily
+(cate_name string,
+title string,
+pv bigint,
+rank bigint)
+partitioned by
+(dt string);

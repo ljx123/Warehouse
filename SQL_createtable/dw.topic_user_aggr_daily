@@ -1,0 +1,11 @@
+create table dw.topic_user_aggr_daily
+(app_ver string,
+userkey string,
+gendar string,
+age string,
+career string,
+res_date string,
+pv bigint,
+unique_pv bigint)
+partitioned by
+(dt string,device_type string);

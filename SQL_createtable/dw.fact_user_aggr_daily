@@ -1,0 +1,9 @@
+create table dw.fact_user_aggr_daily
+(app_ver string,
+userkey string,
+pv bigint,
+unique_pv bigint)
+partitioned by
+(dt string,device_type string);
+
+insert overwrite table dw.fact_user_aggr_daily partition(dt , device_type) select app_ver,userkey,count(*) pv,count(distinct page_id) unique_pv,dt,device_type from dw.fact_page_base where dt='20190408' group by app_ver,userkey,dt,device_type;

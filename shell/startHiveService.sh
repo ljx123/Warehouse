@@ -1,0 +1,1 @@
+hive --service hiveserver -p 50000 > /home/app/hive/logs/exec.log 2>/home/app/hive/logs/error.log &

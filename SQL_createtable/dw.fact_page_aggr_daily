@@ -1,0 +1,9 @@
+create table dw.fact_page_aggr_daily
+(page_id string,
+refer_page_type string,
+pv bigint,
+uv bigint)
+partitioned by
+(dt string);
+
+insert overwrite table dw.fact_page_aggr_daily partition(dt) page_id,reger_page_type,count(*) pv,count(distinct userkey) uv,dt from dw.fact_page_base where dt='"+date+"' group by page_id,dt,reger_page_type;

@@ -1,0 +1,10 @@
+create table dw.topic_page_aggr_daily
+(page_id string,
+refer_page_type string,
+cate_name string,
+editor string,
+title string,
+pv bigint,
+uv bigint)
+partitioned by
+(dtn string);

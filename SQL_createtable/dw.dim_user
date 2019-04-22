@@ -1,0 +1,13 @@
+create table dw.dim_user
+(userkey string,
+gender string,
+age string,
+career string,
+res_date string,
+phone string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n';
+
+
+

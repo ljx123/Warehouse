@@ -1,0 +1,8 @@
+create table dw.dim_page
+(page_id string,
+cate_name string,
+editor string,
+title string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n';

@@ -1,0 +1,6 @@
+create table app.app_dau_daily
+(device_type string,
+dau bigint,
+pv bigint)
+partitioned by
+(dt string);

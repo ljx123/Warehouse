@@ -1,0 +1,19 @@
+create table dw.fact_page_base
+(app_name string,
+device_type string,
+ip string,
+app_ver string,
+userkey string,
+log_type string,
+phone string,
+net string,
+city_id string,
+time_stamp string,
+page_id string,
+refer_page_type string
+)
+partitioned by
+(dt string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;

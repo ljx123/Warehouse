@@ -1,0 +1,7 @@
+create table app.app_user_info_daily
+(gender string,
+age string,
+uv bigint,
+pv bigint)
+partitioned by
+(dt string);
